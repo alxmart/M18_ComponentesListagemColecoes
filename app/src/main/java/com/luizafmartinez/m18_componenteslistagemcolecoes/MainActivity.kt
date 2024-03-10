@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     fun cliqueBotao(view: View) {
 
         btnExecutar.setOnClickListener {
+            //view.id.
             textResultado.text = "jamilton"
         }
     }
