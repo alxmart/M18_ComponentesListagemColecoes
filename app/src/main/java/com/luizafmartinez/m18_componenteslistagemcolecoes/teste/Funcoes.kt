@@ -32,12 +32,18 @@ fun executar2() = println("Executar")
 */
 
 class Botao {
+    //fun configurarCliqueBotao( funcao: () -> Unit ) {
     fun configurarCliqueBotao() {
-        println("Executou botão")
+        println("Executou função lambda")
     }
 }
 
+
 fun main() {
+
+    val botao = Botao()
+
+    botao.configurarCliqueBotao()
 
    /*
     //Função Lambda
