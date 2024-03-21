@@ -54,7 +54,7 @@ fun main() {
     botao.configurarCliqueBotao { nome ->
         println("Executou função lambda. Executou $nome")
     }
-
+}
    /*
     //Função Lambda
    val funcaoLambda =  { nome: String, idade: Int -> // Criou um parâmero para a função lambda
@@ -79,5 +79,4 @@ fun main() {
     //calcular( matematica::somar) // Passou o método somar da classe MAtematica
 
     //println(retorno)
-
 }
