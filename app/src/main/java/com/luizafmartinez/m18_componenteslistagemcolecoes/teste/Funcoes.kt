@@ -21,20 +21,46 @@ fun calcular( funcao: (Int, Int) -> Int ) {
     println(retorno)
 }
 
+
+/*
+fun executar() {
+
+    println("Executar")
+}
+
+fun executar2() = println("Executar")
+*/
+
+class Botao {
+    fun configurarCliqueBotao() {
+        println("Executou botão")
+    }
+}
+
 fun main() {
 
-     val matematica = Matematica()
+   /*
+    //Função Lambda
+   val funcaoLambda =  { nome: String, idade: Int -> // Criou um parâmero para a função lambda
+        println("Executar nome: $nome $idade")
+    }
+    //Chamar Função Lambda
+    funcaoLambda("Jamilton", 35)
+    */
 
-    //val retorno = matematica.somar(10,5)*/
 
-    //val retorno = somar(10, 5)
-    //val retorno = calcular(::somar)
+     //val matematica = Matematica()
 
-    //calcular(10,5)
+            //val retorno = matematica.somar(10,5)*/
 
-    //calcular(::somar) // Passou a função
+            //val retorno = somar(10, 5)
+            //val retorno = calcular(::somar)
 
-    calcular( matematica::somar) // Passou o método somar da classe MAtematica
+            //calcular(10,5)
+
+            //calcular(::somar) // Passou a função
+
+    //calcular( matematica::somar) // Passou o método somar da classe MAtematica
 
     //println(retorno)
 

@@ -13,21 +13,24 @@ import com.luizafmartinez.m18_componenteslistagemcolecoes.teste.Recursos
 class MainActivity : AppCompatActivity() {
 
     private lateinit var btnExecutar: Button
+
     private lateinit var textResultado: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
         btnExecutar = findViewById(R.id.btn_executar)
+
         textResultado = findViewById(R.id.text_resultado)
 
         //println(Recursos.id.text_numero); // Classe id, dentro da Classe Recursos
 
-      /*  btnExecutar.setOnClickListener {
+        btnExecutar.setOnClickListener {
             textResultado.text = "jamilton"
-        }*/
+        }
 
         /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
