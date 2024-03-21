@@ -31,19 +31,29 @@ fun executar() {
 fun executar2() = println("Executar")
 */
 
-class Botao {
+/*class Botao {
     //fun configurarCliqueBotao( funcao: () -> Unit ) {
-    fun configurarCliqueBotao() {
-        println("Executou função lambda")
+    //fun configurarCliqueBotao() {
+    fun configurarCliqueBotao( nome: String, funcao: () -> Unit ) {
+        //println("Executou função lambda")
+        funcao()
+        println("Nome: $nome")
     }
-}
+}*/
 
+class Botao {
+    fun configurarCliqueBotao( funcao: (String) -> Unit ) {
+
+      funcao("Jamilton")
+}
 
 fun main() {
 
     val botao = Botao()
 
-    botao.configurarCliqueBotao()
+    botao.configurarCliqueBotao { nome ->
+        println("Executou função lambda. Executou $nome")
+    }
 
    /*
     //Função Lambda
