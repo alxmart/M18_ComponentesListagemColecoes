@@ -27,6 +27,16 @@ fun main() {
     val pergunta1 = Pergunta("Qual a pergunta ?", 1)
     val pergunta2 = Pergunta("Qual a pergunta ?", 1)
 
+    // Desestruturação
+    val (pergunta,resposta) = pergunta1
+
+    val p = pergunta1.pergunta
+    val r = pergunta1.respostaCerta
+
+    println(pergunta)
+    println(resposta)
+    //  End - Desestruturação---------------------
+    //--------------------------------------------
 
     //pergunta1.pergunta = "Alterar a pergunta"
     //println(pergunta1)
