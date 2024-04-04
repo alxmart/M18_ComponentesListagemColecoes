@@ -27,8 +27,8 @@ package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 fun main() {
 
     val pessoa = Pessoa()
-    pessoa.nome = "Jamilton"
-    println("nome: ${pessoa.nome}")
+    pessoa.nome = "Jamilton"   //set
+    println("nome: ${pessoa.nome}") //get
 
 
    /* val pergunta1 = Pergunta("Qual a pergunta ?", 1)
