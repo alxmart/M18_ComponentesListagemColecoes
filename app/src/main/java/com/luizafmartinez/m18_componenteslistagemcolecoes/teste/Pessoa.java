@@ -7,7 +7,7 @@ public class Pessoa {
 
     public String getNome() {
         System.out.println("Get: " + nome);
-        return nome;
+        return nome.toUpperCase();
     }
 
     public void setNome(String nome) {
