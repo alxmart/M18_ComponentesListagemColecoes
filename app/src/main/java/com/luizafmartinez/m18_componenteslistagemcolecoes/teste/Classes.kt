@@ -25,14 +25,21 @@ package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 }*/
 
 //Getter (Conseguir, recuperar) e Setter (Configurar)
-class Usuario (
-    var nome: String,
-    var idade: Int
-) {}
+class Usuario () {
+
+    var nome: String = ""
+        get() {
+            return field.uppercase()
+        }
+        set(value) {
+            field = "set: $value"   // Pedro é o value !
+        }
+    var idade: Int = 0
+}
 
 fun main() {
 
-    val usuario = Usuario("Jamilton",35)
+    val usuario = Usuario()
     usuario.nome = "Pedro"  // Já acessa, "por baixo dos panos" o GET
     usuario.idade = 18
     println("Nome: ${usuario.nome} idade: ${usuario.idade}")
