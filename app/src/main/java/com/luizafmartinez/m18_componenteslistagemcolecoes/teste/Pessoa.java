@@ -6,10 +6,12 @@ public class Pessoa {
     private int idade = 0;
 
     public String getNome() {
+        System.out.println("Get: " + nome);
         return nome;
     }
 
     public void setNome(String nome) {
+        System.out.println("Set: " + nome);
         this.nome = nome;
     }
 
