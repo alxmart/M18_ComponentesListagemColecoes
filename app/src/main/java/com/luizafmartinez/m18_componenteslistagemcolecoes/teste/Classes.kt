@@ -1,21 +1,23 @@
 package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 
-class Motorista(val nome: String) {
+/*class Motorista(val nome: String) {
     fun exibirDadosMotorista() = println("Motorista: $nome")
-   /* class Caminhao( val nomeCaminhao: String ) { // nested Class , classe aninhada
+   *//* class Caminhao( val nomeCaminhao: String ) { // nested Class , classe aninhada
         fun exibirDadosCaminhao() = println("Caminhao: $nomeCaminhao")
-    }*/
+    }*//*
     inner class Caminhao( val nomeCaminhao: String ) { // nested Class , classe aninhada
 
         fun exibirDadosCaminhao() = println("Caminhao: $nomeCaminhao Motorista: $nome")
         // Acessa o nome que está dentro da classe Motorista
     }
-}
+}*/
 
-data class Pergunta (
+/*data class Pergunta (
     val pergunta: String,
     val respostaCerta: Int
-)
+)*/
+
+
 /*{
     fun exibirAlgo() {
         println("Exibir Algo")
@@ -24,7 +26,12 @@ data class Pergunta (
 
 fun main() {
 
-    val pergunta1 = Pergunta("Qual a pergunta ?", 1)
+    val pessoa = Pessoa()
+    pessoa.nome = "Jamilton"
+    println("nome: ${pessoa.nome}")
+
+
+   /* val pergunta1 = Pergunta("Qual a pergunta ?", 1)
     val pergunta2 = Pergunta("Qual a pergunta ?", 1)
 
     // Desestruturação
@@ -36,7 +43,7 @@ fun main() {
     println(pergunta)
     println(resposta)
     //  End - Desestruturação---------------------
-    //--------------------------------------------
+    //--------------------------------------------*/
 
     //pergunta1.pergunta = "Alterar a pergunta"
     //println(pergunta1)
@@ -44,11 +51,6 @@ fun main() {
     //println(pergunta2 )
     // com.luizafmartinez.m18_componenteslistagemcolecoes.teste.Pergunta@edf4efb
     //println( pergunta1 == pergunta2 ) // false
-
-
-
-
-
 
     /*val motorista = Motorista("Jamilton")
     motorista.exibirDadosMotorista()*/
