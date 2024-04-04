@@ -24,11 +24,24 @@ package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
     }
 }*/
 
+//Getter (Conseguir, recuperar) e Setter (Configurar)
+class Usuario (
+    var nome: String,
+    var idade: Int
+) {}
+
 fun main() {
 
+    val usuario = Usuario("Jamilton",35)
+    usuario.nome = "Pedro"  // Já acessa, "por baixo dos panos" o GET
+    usuario.idade = 18
+    println("Nome: ${usuario.nome} idade: ${usuario.idade}")
+
+
+   /* //Testing using JAVA
     val pessoa = Pessoa()
     pessoa.nome = "Jamilton"   //set
-    println("nome: ${pessoa.nome}") //get
+    println("nome: ${pessoa.nome}") //get*/
 
 
    /* val pergunta1 = Pergunta("Qual a pergunta ?", 1)
