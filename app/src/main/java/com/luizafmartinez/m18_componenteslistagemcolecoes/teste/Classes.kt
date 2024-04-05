@@ -25,7 +25,7 @@ package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 }*/
 
 //Getter (Conseguir, recuperar) e Setter (Configurar)
-class Usuario () {
+/*class Usuario () {
 
     var nome: String = ""
         get() {
@@ -38,15 +38,19 @@ class Usuario () {
 
     var maiorIdade = false
         get() = idade >= 18
-}
+}*/
 
 fun main() {
 
-    val usuario = Usuario()
+
+
+
+    //Get & Set
+    /*val usuario = Usuario()
     usuario.nome = "Pedro"  // Já acessa, "por baixo dos panos" o GET
     usuario.idade = 18
     println("Nome: ${usuario.nome} idade: ${usuario.idade} maiorIdade: ${usuario.maiorIdade}")
-
+*/
 
    /* //Testing using JAVA
     val pessoa = Pessoa()
