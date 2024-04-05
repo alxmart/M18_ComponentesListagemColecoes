@@ -35,6 +35,9 @@ class Usuario () {
             field = "set: $value"   // Pedro é o value !
         }
     var idade: Int = 0
+
+    var maiorIdade = false
+        get() = idade >= 18
 }
 
 fun main() {
@@ -42,7 +45,7 @@ fun main() {
     val usuario = Usuario()
     usuario.nome = "Pedro"  // Já acessa, "por baixo dos panos" o GET
     usuario.idade = 18
-    println("Nome: ${usuario.nome} idade: ${usuario.idade}")
+    println("Nome: ${usuario.nome} idade: ${usuario.idade} maiorIdade: ${usuario.maiorIdade}")
 
 
    /* //Testing using JAVA
