@@ -1,7 +1,5 @@
 package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 
-import java.io.StringBufferInputStream
-
 /*class Motorista(val nome: String) {
     fun exibirDadosMotorista() = println("Motorista: $nome")
    *//* class Caminhao( val nomeCaminhao: String ) { // nested Class , classe aninhada
