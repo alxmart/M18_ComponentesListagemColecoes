@@ -1,5 +1,7 @@
 package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 
+import java.io.StringBufferInputStream
+
 /*class Motorista(val nome: String) {
     fun exibirDadosMotorista() = println("Motorista: $nome")
    *//* class Caminhao( val nomeCaminhao: String ) { // nested Class , classe aninhada
@@ -40,10 +42,40 @@ package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
         get() = idade >= 18
 }*/
 
+class Usuario {
+
+    fun salvarTelefones( vararg telefones: String) {
+
+        for ( telefone in telefones) {
+            println("Telefone: $telefone")
+        }
+    }
+}
+
 fun main() {
 
+    val usuario = Usuario()
+    usuario.salvarTelefones(
+        "(11)99999-8888",
+        "(11)99999-7777",
+        "(11)99999-5555"
+    )
 
-
+    //Testing varargs
+    //====================
+ /*   val pessoa = Pessoa()
+    //VAR ARGS
+   *//* pessoa.salvarTelefone(
+        120351
+        "(11)99999-8888",
+        "(11)99999-7777",
+        "(11)99999-5555"
+    )*//*
+    pessoa.salvarTelefone(
+        "(11)99999-8888",
+        "(11)99999-7777",
+        "(11)99999-5555"
+    )*/
 
     //Get & Set
     /*val usuario = Usuario()
