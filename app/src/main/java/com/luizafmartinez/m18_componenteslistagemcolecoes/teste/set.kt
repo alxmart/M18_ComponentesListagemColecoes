@@ -1,0 +1,39 @@
+package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
+
+data class Carro(
+    val nome: String,
+    val marca: String
+)
+
+fun main() {
+
+    // SET - Lista de itens que não se repetem
+    val lista = setOf("jamilton", "ana", "pedro", "maria", "ana")
+
+    lista.forEach { nome ->
+        println( nome )
+    }
+    // Obs: Não se utiliza indices para fazer exibição. println(lista[0])
+
+    // val novaLista = lista.plus("ana")  // Não vai se repetir
+
+    println("Tamanho da lista: ${lista.size} itens")
+
+    println( lista.indexOf("jamilton") )
+
+    // ==================================================
+    //  MutableSetOf
+    //===================================================
+
+
+
+
+
+
+
+
+
+
+
+
+}
