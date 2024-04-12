@@ -1,8 +1,27 @@
 package com.luizafmartinez.m18_componenteslistagemcolecoes.teste
 
-
+data class Cliente(
+    val nome: String,
+    val idade: Int
+)
 
 fun main() {
+
+    val cliente1 = Cliente("Jamilton", 35)
+    val cliente2 = Cliente("Ana", 22)
+
+    val listaClientes = mutableListOf(
+        cliente1,cliente2
+    )
+
+    listaClientes.forEach { cliente ->
+        println("Cliente: ${cliente.nome} - ${cliente.idade}")
+    }
+
+    // listaClientes.clear()
+
+    // listaClientes.shuffle()
+
 
     //val listaArray = arrayOf("jamilton", "ana")//Não pode adicionar mais items
 
