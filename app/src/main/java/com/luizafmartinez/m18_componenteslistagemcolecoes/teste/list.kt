@@ -17,10 +17,17 @@ fun main() {
     listaClientes.forEach { cliente ->
         println("Cliente: ${cliente.nome} - ${cliente.idade}")
     }
+    // Saída;
+    // Cliente: Jamilton - 35
+    // Cliente: Ana - 22
 
     // listaClientes.clear()
 
     // listaClientes.shuffle()
+
+
+
+    //===========================================================================
 
 
     //val listaArray = arrayOf("jamilton", "ana")//Não pode adicionar mais items
