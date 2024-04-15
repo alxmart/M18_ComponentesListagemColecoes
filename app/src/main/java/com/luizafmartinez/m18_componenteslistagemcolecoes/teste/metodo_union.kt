@@ -18,10 +18,4 @@ fun main() {
     println(listaFinal)
 
 
-
-
-
-
-
-
 }
