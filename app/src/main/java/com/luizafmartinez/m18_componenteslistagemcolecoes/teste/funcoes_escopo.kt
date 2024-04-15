@@ -30,11 +30,17 @@ class AlertaMensagem {
 
         val alertaMensagem = AlertaMensagem()
 
-   /*     alertaMensagem.configurarTitulo("Confirmar salvar ?")
+   /*   alertaMensagem.configurarTitulo("Confirmar salvar ?")
         alertaMensagem.configurarDescricao("Você tem certeza...")
         alertaMensagem.configurarCancelar()
         alertaMensagem.configurarConfirmar()*/
 
+        alertaMensagem.apply {
+           configurarTitulo("Confirmar salvar ?")
+           configurarDescricao("Você tem certeza...")
+           configurarCancelar()
+           configurarConfirmar()
+        }
 
 
    /* var produto: Produto2? = null
