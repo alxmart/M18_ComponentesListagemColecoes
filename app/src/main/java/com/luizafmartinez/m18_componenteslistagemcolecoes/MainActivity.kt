@@ -6,12 +6,18 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.luizafmartinez.m18_componenteslistagemcolecoes.teste.Produto
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var btnExecutar: Button
 
     private lateinit var textResultado: TextView
+
+    fun salvarProduto(produto: Produto) {
+
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
