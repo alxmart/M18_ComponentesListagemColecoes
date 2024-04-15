@@ -9,5 +9,4 @@ fun main() {
     val local = Triple(10, 20, "pizzaria")
     println(local.third)
 
-
 }
