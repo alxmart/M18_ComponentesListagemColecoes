@@ -35,13 +35,21 @@ class AlertaMensagem {
         alertaMensagem.configurarCancelar()
         alertaMensagem.configurarConfirmar()*/
 
+        /*
         alertaMensagem.apply {
            configurarTitulo("Confirmar salvar ?")
            configurarDescricao("Você tem certeza...")
            configurarCancelar()
            configurarConfirmar()
         }
+        */
 
+        val lista = listOf("jamilton", "ana", "pedro")
+
+        lista
+            .map { it.uppercase()}
+            .also { println(it) }
+            .run { println(this) }
 
    /* var produto: Produto2? = null
 
