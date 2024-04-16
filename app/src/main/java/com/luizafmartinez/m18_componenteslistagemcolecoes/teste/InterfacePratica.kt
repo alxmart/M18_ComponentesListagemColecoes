@@ -66,12 +66,18 @@ class Bateria : Instrumento {  // Dois tipos: Bateria e Instrumento
         }
     }
 
+class Activity {
+    fun putExtra() {
+
+    }
+}
+
 fun main() {
 
     //val violao : Instrumento = Violao()
     //val bateria: Instrumento = Bateria()
 
-    // Tela 1 (Violão)
+    /*// Tela 1 (Violão)
     val violao1 = Violao()
     val musico1 = Musico( violao1 )
     musico1.tocar()
@@ -92,6 +98,6 @@ fun main() {
     // Tela 4 (Guitarra)
     val guitarra = Guitarra()
     val musico4 = Musico( guitarra ) // Dois tipos: Guitarra e instrumento
-    musico4.tocar()
+    musico4.tocar()*/
 
 }
