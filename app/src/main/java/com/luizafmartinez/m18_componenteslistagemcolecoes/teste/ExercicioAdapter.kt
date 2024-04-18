@@ -42,7 +42,10 @@ class ComponenteListagem {
     }
 }
 
-class MeuAdaptador(lista: List<String>) : Adaptador {
+//class MeuAdaptador(lista: List<String>) : Adaptador {
+
+// ALternate version using Paciente
+class MeuAdaptador(lista: List<Paciente>) : Adaptador {
 
     private val listaItens = lista
 
@@ -59,15 +62,35 @@ class MeuAdaptador(lista: List<String>) : Adaptador {
         return retorno ou
         return "#posicao) $nome -"
         */
-        // Minha solução:
-        return "$posicao) ${listaItens[posicao]}"
+
+        // Minha solução 1 :
+        //return "$posicao) ${listaItens[posicao]}"
+
+        //Alternate version:
+        val paciente = listaItens[posicao]
+        var item = "${paciente.nome} - (${paciente.idade}) \n"
+        item += "------------------"
+        return item
     }
 }
+
+data class Paciente(
+    val nome: String,
+    val idade: Int
+)
 
 fun main() {
 
     //Lista de itens
-    val listaItens = listOf("jamilton", "ana", "maria", "pedro", "joão")
+    // val listaItens = listOf("jamilton", "ana", "maria", "pedro", "joão")
+
+    // Alternate version:
+    val listaItens = listOf(
+        Paciente("Ana", 25),
+        Paciente("Jamilton", 18),
+        Paciente("Maria", 45),
+        Paciente("Pedro", 28)
+    )
 
     val componenteListagem = ComponenteListagem()
 
