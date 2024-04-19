@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerviewActivity : AppCompatActivity() {
@@ -21,7 +22,11 @@ class RecyclerviewActivity : AppCompatActivity() {
             insets
         }
 
+        val lista = listOf("Jamilton", "Ana", "Maria", "Pedro" )
+
         rvLista = findViewById(R.id.rv_lista)
+        rvLista.adapter = MensagemAdapter(lista)//Tem que ser do tipo "MensagemAdapter" e "Adapter"
+        rvLista.layoutManager = LinearLayoutManager(this)
 
     }
 }
