@@ -1,6 +1,6 @@
 package com.luizafmartinez.m18_componenteslistagemcolecoes.teste;
 
-public class Pessoa {
+public class PessoaX {
 
     private String nome = "";
     private int idade = 0;

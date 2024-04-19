@@ -61,7 +61,7 @@ fun main() {
 
     //Testing varargs
     //====================
- /*   val pessoa = Pessoa()
+ /*   val pessoa = PessoaX()
     //VAR ARGS
    *//* pessoa.salvarTelefone(
         120351
@@ -83,7 +83,7 @@ fun main() {
 */
 
    /* //Testing using JAVA
-    val pessoa = Pessoa()
+    val pessoa = PessoaX()
     pessoa.nome = "Jamilton"   //set
     println("nome: ${pessoa.nome}") //get*/
 
