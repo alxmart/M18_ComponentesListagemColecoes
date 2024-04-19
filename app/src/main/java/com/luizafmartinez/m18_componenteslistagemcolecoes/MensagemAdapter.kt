@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
 class MensagemAdapter(
-    private val lista: List<String>
+    private val lista: List<Mensagem>
 ) : RecyclerView.Adapter<MensagemAdapter.MensagemViewHolder>()  {
 
     // Classe que vai armazenar a visualizacao. Vai utilizar o item_lista.xml
@@ -39,11 +39,13 @@ class MensagemAdapter(
         return MensagemViewHolder( itemView )
     }
 
-    // Ao vincular o ViewHolder
+    // Ao vincular os ados para o ViewHolder
     override fun onBindViewHolder(holder: MensagemViewHolder, position: Int) {
 
-        val nome = lista[position]
-        holder.textNome.text = nome
+        val mensagem = lista[position]
+        holder.textNome.text = mensagem.nome
+        holder.textUltima.text = mensagem.ultima
+        holder.textHora.text = mensagem.horario
 
     }
 
