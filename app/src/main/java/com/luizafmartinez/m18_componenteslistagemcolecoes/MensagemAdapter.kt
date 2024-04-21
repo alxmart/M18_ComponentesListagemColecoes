@@ -20,7 +20,7 @@ class MensagemAdapter(
 
          val textNome   : TextView = itemView.findViewById(R.id.text_nome)
          val textUltima : TextView = itemView.findViewById(R.id.text_ultima)
-         val textHora   : TextView = itemView.findViewById(R.id.text_horario)
+         //val textHora   : TextView = itemView.findViewById(R.id.text_horario)
     }
 
     // Vai criar a visualização
@@ -45,7 +45,7 @@ class MensagemAdapter(
         val mensagem = lista[position]
         holder.textNome.text = mensagem.nome
         holder.textUltima.text = mensagem.ultima
-        holder.textHora.text = mensagem.horario
+        //holder.textHora.text = mensagem.horario
 
     }
 

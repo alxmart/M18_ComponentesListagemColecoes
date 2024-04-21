@@ -31,7 +31,16 @@ class RecyclerviewActivity : AppCompatActivity() {
 
         rvLista = findViewById(R.id.rv_lista)
         rvLista.adapter = MensagemAdapter(lista)//Tem que ser do tipo "MensagemAdapter" e "Adapter"
-        rvLista.layoutManager = LinearLayoutManager(this)
+
+        // Linear Layout Manager (Configurar com XML ou Código)
+        // XML:
+        // app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        // Código Kotlin:
+       /* rvLista.layoutManager = LinearLayoutManager(
+            this,
+            RecyclerView.VERTICAL,
+            false
+        )*/
 
     }
 }
