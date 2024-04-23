@@ -36,11 +36,17 @@ class RecyclerviewActivity : AppCompatActivity() {
         rvLista = findViewById(R.id.rv_lista)
         rvLista.adapter = MensagemAdapter(lista)//Tem que ser do tipo "MensagemAdapter" e "Adapter"
 
+        rvLista.layoutManager = LinearLayoutManager(
+            this,
+            RecyclerView.VERTICAL,
+            false
+        )
+
         // StaggeredGrid Layou MAnager
-        rvLista.layoutManager = StaggeredGridLayoutManager(
+        /*rvLista.layoutManager = StaggeredGridLayoutManager(
             2,
             RecyclerView.VERTICAL
-        )
+        )*/
 
         // Grid Layout Manager
         /*
