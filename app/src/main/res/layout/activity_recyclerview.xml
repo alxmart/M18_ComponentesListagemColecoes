@@ -23,9 +23,6 @@
         app:layout_constraintVertical_bias="0.5"
 
 
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        android:orientation="vertical"
 
 
         tools:itemCount="20"
@@ -33,6 +30,11 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--
+
+    StaggeredGrid Layout Manager
+    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+    app:spanCount="2"
+
     Linear Layout
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     android:orientation="vertical"
@@ -40,6 +42,6 @@
 
     Grid Layout
     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        android:orientation="vertical"
+    app:spanCount="2"
+    android:orientation="vertical"
 -->
