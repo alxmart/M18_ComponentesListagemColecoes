@@ -36,7 +36,7 @@ class RecyclerviewActivity : AppCompatActivity() {
         // XML:
         // app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         // Código Kotlin:
-       /* rvLista.layoutManager = LinearLayoutManager(
+        /*rvLista.layoutManager = LinearLayoutManager(
             this,
             RecyclerView.VERTICAL,
             false
