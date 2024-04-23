@@ -18,8 +18,14 @@ class MensagemAdapter(
         val itemView: View
     ) : ViewHolder( itemView ) { // Qual a View que vai ser utilizada
 
+         /*
          val textNome   : TextView = itemView.findViewById(R.id.text_nome)
          val textUltima : TextView = itemView.findViewById(R.id.text_ultima)
+         */
+
+         // Trocando para usar o CardView: (text_card_nome/text_card_ultima)
+         val textNome: TextView = itemView.findViewById(R.id.text_card_nome)
+         val textUltima: TextView = itemView.findViewById(R.id.text_card_ultima)
          //val textHora   : TextView = itemView.findViewById(R.id.text_horario)
     }
 
@@ -30,10 +36,13 @@ class MensagemAdapter(
             parent.context
         )
 
+        /*val itemView = layoutInflater.inflate(
+            R.layout.item_lista,parent,false
+        ) */
+
+        // Trocando para usar o CardView
         val itemView = layoutInflater.inflate(
-            R.layout.item_lista,
-            parent,
-            false
+            R.layout.item_cardview,parent,false
         )
 
         return MensagemViewHolder( itemView )
@@ -46,12 +55,10 @@ class MensagemAdapter(
         holder.textNome.text = mensagem.nome
         holder.textUltima.text = mensagem.ultima
         //holder.textHora.text = mensagem.horario
-
     }
 
     // Recupera a quantidade de itens
     override fun getItemCount(): Int {
-
         return lista.size
     }
 
