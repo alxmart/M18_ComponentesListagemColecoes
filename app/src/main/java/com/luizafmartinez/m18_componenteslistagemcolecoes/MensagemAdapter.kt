@@ -44,7 +44,7 @@ class MensagemAdapter(
 
             //val context = cardView.context
             cardView.setOnClickListener {
-                clique( mensagem.nome )
+                clique(mensagem.nome)
             }
 
             // Aplicar eventos de clique:
@@ -72,7 +72,6 @@ class MensagemAdapter(
         val itemView = layoutInflater.inflate(
             R.layout.item_cardview, parent, false
         )
-
         return MensagemViewHolder(itemView)
     }
 
@@ -88,5 +87,4 @@ class MensagemAdapter(
     override fun getItemCount(): Int {
         return lista.size
     }
-
 }
