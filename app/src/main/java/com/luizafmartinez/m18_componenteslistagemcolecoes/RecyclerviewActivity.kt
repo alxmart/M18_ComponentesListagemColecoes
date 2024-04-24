@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.luizafmartinez.m18_componenteslistagemcolecoes.teste.nome
 
 class RecyclerviewActivity : AppCompatActivity() {
 
@@ -39,17 +40,17 @@ class RecyclerviewActivity : AppCompatActivity() {
         rvLista = findViewById(R.id.rv_lista)
 
         //Tem que ser do tipo "MensagemAdapter" e "Adapter"
-        rvLista.adapter = MensagemAdapter(lista) {
+        rvLista.adapter = MensagemAdapter( lista ) { nome ->
 
-          Toast.makeText(
-              this,
-              "Olá",
-              Toast.LENGTH_SHORT).show()
+          Toast.makeText(this,"Olá $nome",Toast.LENGTH_SHORT).show()
+
+          val intent = Intent(this, ListViewActivity::class.java)
+          intent.putExtra("nome", nome)
 
           startActivity(
               Intent(this, ListViewActivity::class.java)
           )
-            
+
         }
 
         rvLista.layoutManager = LinearLayoutManager(
