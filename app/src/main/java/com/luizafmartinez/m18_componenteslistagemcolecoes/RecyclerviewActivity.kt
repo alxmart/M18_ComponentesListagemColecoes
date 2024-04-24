@@ -2,6 +2,7 @@ package com.luizafmartinez.m18_componenteslistagemcolecoes
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,8 +14,11 @@ import androidx.recyclerview.widget.RecyclerView
 class RecyclerviewActivity : AppCompatActivity() {
 
     private lateinit var rvLista: RecyclerView
+    private lateinit var btnClique: Button
+    private lateinit var mensagemAdapter : MensagemAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_recyclerview)
@@ -24,7 +28,7 @@ class RecyclerviewActivity : AppCompatActivity() {
             insets
         }
 
-        val lista = listOf(
+        val lista = mutableListOf(
             Mensagem("Jamilton", "Olá, tudo bem ?", "10:45"),
             //Testando o StaggeredGrid Layout: (texto grande)
             Mensagem(
@@ -38,26 +42,42 @@ class RecyclerviewActivity : AppCompatActivity() {
         )
 
         rvLista = findViewById(R.id.rv_lista)
+        btnClique = findViewById(R.id.btn_clique)
+
+        mensagemAdapter = MensagemAdapter {
+
+            MensagemAdapter { nome ->
+
+                Toast.makeText(this, "Olá $nome", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, ListViewActivity::class.java)
+                intent.putExtra("nome", nome)
+
+                startActivity(
+                    Intent(this, ListViewActivity::class.java)
+                )
+            }
+        }
+
+        mensagemAdapter.atualizarListaDados(
+            lista
+        )
 
         //Tem que ser do tipo "MensagemAdapter" e "Adapter"
-        rvLista.adapter = MensagemAdapter(lista) { nome ->
-
-            Toast.makeText(this, "Olá $nome", Toast.LENGTH_SHORT).show()
-
-            val intent = Intent(this, ListViewActivity::class.java)
-            intent.putExtra("nome", nome)
-
-            startActivity(
-                Intent(this, ListViewActivity::class.java)
-            )
-
-        }
+        rvLista.adapter = mensagemAdapter
 
         rvLista.layoutManager = LinearLayoutManager(
             this,
             RecyclerView.VERTICAL,
             false
         )
+
+        btnClique.setOnClickListener {
+            lista.add(
+                Mensagem("Nova Jamilton", "Teste", "17:12")
+            )
+            mensagemAdapter.atualizarListaDados(lista)
+        }
 
         // Adicionando um Divisor:
         /*rvLista.addItemDecoration(

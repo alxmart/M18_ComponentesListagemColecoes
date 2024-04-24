@@ -10,17 +10,18 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
 class MensagemAdapter(
-
-    private val lista: List<Mensagem>,
     private val clique: (String) -> Unit
 ) : RecyclerView.Adapter<MensagemAdapter.MensagemViewHolder>() {
 
-    fun configurarClique() {
+    private var listaMensagens = mutableListOf<Mensagem>()
 
+    fun atualizarListaDados( lista: MutableList<Mensagem>) {
+        //listaMensagens.addAll( lista )
+        listaMensagens = lista
+        notifyDataSetChanged()
     }
 
     // Classe que vai armazenar a visualizacao. Vai utilizar o item_lista.xml
-
     inner class MensagemViewHolder(
         val itemView: View
     ) : ViewHolder(itemView) { // Qual a View que vai ser utilizada
@@ -58,7 +59,6 @@ class MensagemAdapter(
             */
         }
     }
-
     // Vai criar a visualização
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MensagemViewHolder {
 
@@ -79,12 +79,12 @@ class MensagemAdapter(
     // Executa n vezes de acordo com getItemCount
     override fun onBindViewHolder(holder: MensagemViewHolder, position: Int) {
 
-        val mensagem = lista[position]
+        val mensagem = listaMensagens[position]
         holder.bind(mensagem)
     }
 
     // Recupera a quantidade de itens
     override fun getItemCount(): Int {
-        return lista.size
+        return listaMensagens.size
     }
 }
