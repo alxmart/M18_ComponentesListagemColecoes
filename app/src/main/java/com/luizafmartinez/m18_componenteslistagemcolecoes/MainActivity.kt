@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textResultado: TextView
 
     fun salvarProduto(produto: Produto) {
-
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -46,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             "Sucesso ao fazer algo",
             Toast.LENGTH_LONG
         ).show()
-
 
         textResultado.text = "jamilton"
     }
