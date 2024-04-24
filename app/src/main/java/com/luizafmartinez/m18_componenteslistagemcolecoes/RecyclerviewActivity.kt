@@ -1,6 +1,8 @@
 package com.luizafmartinez.m18_componenteslistagemcolecoes
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -35,7 +37,20 @@ class RecyclerviewActivity : AppCompatActivity() {
         )
 
         rvLista = findViewById(R.id.rv_lista)
-        rvLista.adapter = MensagemAdapter(lista)//Tem que ser do tipo "MensagemAdapter" e "Adapter"
+
+        //Tem que ser do tipo "MensagemAdapter" e "Adapter"
+        rvLista.adapter = MensagemAdapter(lista) {
+
+          Toast.makeText(
+              this,
+              "Olá",
+              Toast.LENGTH_SHORT).show()
+
+          startActivity(
+              Intent(this, ListViewActivity::class.java)
+          )
+            
+        }
 
         rvLista.layoutManager = LinearLayoutManager(
             this,
