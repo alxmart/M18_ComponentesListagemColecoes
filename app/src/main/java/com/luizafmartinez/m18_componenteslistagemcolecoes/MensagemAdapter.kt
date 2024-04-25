@@ -23,10 +23,18 @@ class MensagemAdapter(
         //  2 - Maria
         //  3 - Pedro
 
-        listaMensagens[0] = Mensagem ("Jamilton DAMASCENO", "Deu tudo certo ?", "11:45")
-        listaMensagens[1] = Mensagem ("Ana", "Olá, tudo bem ?", "11:45")
-        notifyItemRangeChanged(0,2)
+        listaMensagens.removeAt(1)
+        listaMensagens.removeAt(2)
+        notifyItemRangeRemoved(1, 2)
 
+        /*
+        listaMensagens.removeAt(1)
+        notifyItemRemoved(1) // OBS: Estes metodos são herdados de Adapter
+        */
+
+        /*listaMensagens[0] = Mensagem ("Jamilton DAMASCENO", "Deu tudo certo ?", "11:45")
+        listaMensagens[1] = Mensagem ("Ana", "Olá, tudo bem ?", "11:45")
+        notifyItemRangeChanged(0,2)*/
 
         //  Index:
         //  0 - Jamilton
@@ -35,10 +43,10 @@ class MensagemAdapter(
         //  3 - Nova Maria
         //  4 - Nova joão
 
-       /*
-       listaMensagens[0] = Mensagem("Jamilton DAMASCENO", "Deu tudo certo ?", "11:45")
-        notifyItemChanged( 0 )
-        */
+        /*
+        listaMensagens[0] = Mensagem("Jamilton DAMASCENO", "Deu tudo certo ?", "11:45")
+         notifyItemChanged( 0 )
+         */
 
         /*
         listaMensagens.add(
@@ -65,7 +73,7 @@ class MensagemAdapter(
         //notifyItemInserted(0)
     }
 
-    fun atualizarListaDados( lista: MutableList<Mensagem>) {
+    fun atualizarListaDados(lista: MutableList<Mensagem>) {
         //listaMensagens.addAll( lista )
         listaMensagens = lista
         notifyDataSetChanged()
@@ -109,6 +117,7 @@ class MensagemAdapter(
             */
         }
     }
+
     // Vai criar a visualização
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MensagemViewHolder {
 
