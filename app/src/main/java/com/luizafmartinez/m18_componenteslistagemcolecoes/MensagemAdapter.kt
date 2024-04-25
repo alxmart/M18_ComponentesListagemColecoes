@@ -17,13 +17,32 @@ class MensagemAdapter(
 
     fun executarOperacao() {
 
+        //  Index:
+        //  0 - Jamilton
+        //  1 - Ana
+
+        //  2 - Nova Pedro
+        //  3 - Nova Maria
+        //  4 - Nova joão
+
         listaMensagens.add(
-            0,  // Coloca na posição 0
+            //0,  // Coloca na posição 0
             Mensagem("Nova Pedro","teste","17:12")
         )
+        listaMensagens.add(
+            //0,  // Coloca na posição 0
+            Mensagem("Nova Maria","teste maria","17:30")
+        )
+        listaMensagens.add(
+            //0,  // Coloca na posição 0
+            Mensagem("Nova João","teste joao","11:10")
+        )
+        // Atualiza itens 2,3,4(index)
+        notifyItemRangeInserted(2,3)
+
         //notifyItemInserted(2)
         //notifyItemInserted(listaMensagens.size)
-        notifyItemInserted(0)
+        //notifyItemInserted(0)
     }
 
     fun atualizarListaDados( lista: MutableList<Mensagem>) {
