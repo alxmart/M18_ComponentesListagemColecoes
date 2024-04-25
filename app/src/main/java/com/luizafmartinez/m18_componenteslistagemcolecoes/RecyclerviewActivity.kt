@@ -37,8 +37,8 @@ class RecyclerviewActivity : AppCompatActivity() {
                 "00:45"
             ),
             //Mensagem("Ana", "Te vi ontem..", "00:45"),
-            Mensagem("Maria", "Não acredito...", "06:03"),
-            Mensagem("Pedro", "Futebol hoje ?", "15:32")
+            /*Mensagem("Maria", "Não acredito...", "06:03"),
+            Mensagem("Pedro", "Futebol hoje ?", "15:32")*/
         )
 
         rvLista = findViewById(R.id.rv_lista)
@@ -49,7 +49,6 @@ class RecyclerviewActivity : AppCompatActivity() {
             MensagemAdapter { nome ->
 
                 Toast.makeText(this, "Olá $nome", Toast.LENGTH_SHORT).show()
-
                 val intent = Intent(this, ListViewActivity::class.java)
                 intent.putExtra("nome", nome)
 
@@ -73,10 +72,16 @@ class RecyclerviewActivity : AppCompatActivity() {
         )
 
         btnClique.setOnClickListener {
+
+            mensagemAdapter.executarOperacao()
+
+           /*
             lista.add(
                 Mensagem("Nova Jamilton", "Teste", "17:12")
             )
             mensagemAdapter.atualizarListaDados(lista)
+            */
+
         }
 
         // Adicionando um Divisor:
