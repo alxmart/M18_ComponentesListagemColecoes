@@ -25,6 +25,10 @@ class MensagemAdapter(
         //  3 - Nova Maria
         //  4 - Nova joão
 
+        listaMensagens[0] = Mensagem("Jamilton DAMASCENO", "Deu tudo certo ?", "11:45")
+
+        notifyItemChanged( 0 )
+        /*
         listaMensagens.add(
             //0,  // Coloca na posição 0
             Mensagem("Nova Pedro","teste","17:12")
@@ -37,11 +41,15 @@ class MensagemAdapter(
             //0,  // Coloca na posição 0
             Mensagem("Nova João","teste joao","11:10")
         )
+        */
+
         // Atualiza itens 2,3,4(index)
-        notifyItemRangeInserted(2,3)
+        //notifyItemRangeInserted(2,3)
 
         //notifyItemInserted(2)
+
         //notifyItemInserted(listaMensagens.size)
+
         //notifyItemInserted(0)
     }
 
